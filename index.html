@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="1djTvLbSeUwEUkhDFcWXxm5sKgEZ79pPEecrxYZiVNA" />
 <meta name="google-site-verification" content="jy6ZTeMInkhjf5XHEZoDdwtHuObPMu_Ha2HubnQnp4I" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,15 +14,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2D5A27;        /* cool blue */
+      --primary: #2D5A27;        /* cool green */
       --secondary: #2D5A27;       /* deep navy */
-      --accent: #023020;          /* light steel */
+      --accent: #023020;          /* dark green */
       --light: #F5F8FA;           /* off-white */
       --dark: #1E2B3A;            /* almost black */
       --gray: #5A6E7F;
       --light-gray: #D0DAE4;
       --white: #ffffff;
-      --gradient: linear-gradient(135deg, 	#059033 0%, #355a20 100%);
+      --gradient: linear-gradient(135deg, #059033 0%, #355a20 100%);
       --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
       --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.12);
       --radius: 16px;
@@ -308,20 +307,25 @@
       display: block;
     }
     
-    .conclusion-container {
+    /* conclusion + map layout */
+    .conclusion-with-map {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      margin-bottom: 60px;
-      align-items: start;
+      gap: 40px;
+      margin: 60px auto;
+      align-items: stretch;
     }
     .conclusion-text {
       background: var(--white);
-      padding: 50px;
+      padding: 45px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      position: relative;
       border-top: 5px solid var(--primary);
+      transition: var(--transition);
+    }
+    .conclusion-text:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
     }
     .conclusion-text h2 {
       color: var(--dark);
@@ -332,22 +336,28 @@
       align-items: center;
       gap: 15px;
     }
-    .conclusion-map {
+    .map-container {
+      background: var(--white);
       border-radius: var(--radius);
       overflow: hidden;
       box-shadow: var(--shadow);
-      height: 100%;
-      min-height: 400px;
       transition: var(--transition);
+      border-top: 5px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
     }
-    .conclusion-map:hover {
+    .map-container:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-hover);
     }
-    .conclusion-map img {
+    .map-container iframe {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      min-height: 380px;
+      border-radius: 12px;
+      display: block;
     }
     
     .testimonial {
@@ -378,17 +388,18 @@
       font-size: 1.1rem;
     }
     
-    .footer {
+    /* FOOTER — standalone, exactly as requested */
+    .site-footer {
       background: var(--white);
       padding: 60px 40px;
-      margin-top: 80px;
+      margin: 80px auto 40px;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .footer::before {
+    .site-footer::before {
       content: '';
       position: absolute;
       top: 0; left: 0; width: 100%; height: 5px;
@@ -432,7 +443,7 @@
     }
     
     @media (max-width: 992px) {
-      .intro-container, .conclusion-container { grid-template-columns: 1fr; }
+      .intro-container, .conclusion-with-map { grid-template-columns: 1fr; }
       .header-section h1 { font-size: 2.3rem; }
     }
     @media (max-width: 768px) {
@@ -451,7 +462,7 @@
       <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzVGTanppmh6ezuuligWt9thnEc6YpkstivUOkQbmNss9EtWZRypB0jKhC6Cfb3Rd406XPwLUB1WBQ3TtFe-jfrUOfwFFpDNuRdhODFjl1k1CuwsgakjwcG4OloqUAkTJ5NseLK1-kyEmbkFfRhL3W_nYMQp5QtV5jE4RDeLStEQatGWSktlozaUHMKI_v/s500/LOGO-ACE-Blue1.png" alt="Concentrates extraction">
     </a>
     <div class="brand-text">
-      <h1 class="brand-name">Concentrate Lab</h1>
+      <h1 class="brand-name">Alaska Cannabis Exchange</h1>
       <div class="brand-tagline">Anchorage, AK · potency & purity</div>
     </div>
   </div>
@@ -505,7 +516,7 @@
 <!-- mid‑article second link inserted here (exactly as requested) -->
 <article class="container section fade-in">
   <div class="section-header"><div class="section-icon"><i class="fas fa-ruler"></i></div><h2>Consistency and Standardization</h2></div>
-  <p>One advantage of concentrates over regular products is the ability to control dosage accurately. Regular edibles or CBD products may vary in potency due to natural variations in ingredients, while concentrates undergo extraction and refinement to ensure consistency. This makes them more reliable for users who need predictable effects. For instance, CBD concentrates allow consumers to monitor their intake precisely, which is particularly important for medicinal use. To explore reliable options, visit concentrate selections in Anchorage, AK</a></strong>.</p>
+  <p>One advantage of concentrates over regular products is the ability to control dosage accurately. Regular edibles or CBD products may vary in potency due to natural variations in ingredients, while concentrates undergo extraction and refinement to ensure consistency. This makes them more reliable for users who need predictable effects. For instance, CBD concentrates allow consumers to monitor their intake precisely, which is particularly important for medicinal use. To explore reliable options, visit <strong><a href="https://alaskacannabisexchange.com/" class="article-link">concentrate selections in Anchorage, AK</a></strong>.</p>
 </article>
 
 <article class="container section fade-in">
@@ -534,19 +545,25 @@
   <div class="testimonial-author">— Mark T., Anchorage</div>
 </section>
 
-<!-- Conclusion section with third link (exact wording) -->
-<section class="container conclusion-container fade-in">
+<!-- ========== CONCLUSION + MAP (professionally together) ========== -->
+<section class="container conclusion-with-map fade-in">
+  <!-- conclusion text (exact wording + third link) -->
   <article class="conclusion-text">
     <h2><i class="fas fa-check-circle" style="color: var(--primary);"></i> Conclusion</h2>
     <p>Concentrates differ from regular products in terms of effectiveness due to their high potency, rapid onset, versatility, and consistency. Whether used for recreational or medicinal purposes, concentrates offer targeted relief and a more intense experience than edibles, topicals, or other standard CBD products. In Anchorage, AK, consumers have access to a wide range of concentrates, alongside complementary products like edibles, topicals, CBD apparel, and accessories, allowing for a personalized and effective wellness routine. By understanding the unique benefits of concentrates, users can make informed decisions and enjoy their superior effectiveness in daily life. For premium-quality concentrates, visit <strong><a href="https://dutchie.com/embedded-menu/alaska-cannabis-exchange-anchorage-ak/products/concentrates" class="article-link">best quality concentrate</a></strong>.</p>
-  
+  </article>
 
-<!-- Footer (brand contact, same style) -->
-<footer class="container footer fade-in">
+  <!-- your map embedded as a separate dev, professional & stylish -->
+  <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1922.509676528969!2d-149.90585439999998!3d61.1934441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x56c897c23e8953af%3A0xa07bb8b23a1ad3e8!2sAlaska%20Cannabis%20Exchange!5e0!3m2!1sen!2s!4v1773853545217!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<!-- ========== STANDALONE FOOTER (exactly as provided, separated) ========== -->
+<footer class="container site-footer fade-in">
   <div class="contact-buttons">
-    <a href="https://alaskacannabisexchange.com/" class="contact-btn"><i class="fas fa-globe"></i> alaskacannabisexchange</a>
-    <a href="https://alaskacannabisexchange.com/contact-us/" class="contact-btn"><i class="fas fa-envelope"></i> 
-retail@cannabisace.com</a>
+    <a href="(907) 301-4208" class="contact-btn"><i class="fas fa-phone"></i> (907) 301-4208</a>
+    <a href="https://alaskacannabisexchange.com/contact-us/" class="contact-btn"><i class="fas fa-envelope"></i> retail@cannabisace.com</a>
   </div>
   <div class="footer-info">
     <strong>Eden Health Works · Anchorage, AK</strong><br>
